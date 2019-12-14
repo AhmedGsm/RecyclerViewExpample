@@ -21,7 +21,9 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(linearLayoutManager);
 
 
-
+        //Attach an adapter for recyclerView to display data
+        RecyclerViewAdapter recyclerAdapter = new RecyclerViewAdapter( COUTRIES_LIST);
+        recyclerView.setAdapter(recyclerAdapter);
 
     }
 }
