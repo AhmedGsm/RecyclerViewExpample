@@ -1,6 +1,5 @@
 package com.example.recyclerviewapp;
 
-import android.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -41,6 +40,11 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
         ImageView dummyImageView = (ImageView)linearLayoutParent.getChildAt(0);
         dummyImageView.setImageResource(R.drawable.baseline_card_giftcard_black_48dp);
 
+    }
+
+    @Override
+    public int getItemCount() {
+        return mDataset.length;
     }
 
     public static class CustomViewHolder extends RecyclerView.ViewHolder {
