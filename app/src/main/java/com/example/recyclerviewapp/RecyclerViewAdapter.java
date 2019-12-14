@@ -1,5 +1,8 @@
 package com.example.recyclerviewapp;
 
+import android.annotation.Nullable;
+import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
@@ -16,7 +19,9 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
     @NonNull
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return null;
+        LinearLayout linearLayout = (LinearLayout )LayoutInflater.from(parent.getContext()).
+                inflate(R.layout.list_item,parent,false);
+        return new CustomViewHolder(linearLayout);
     }
 
     public static class CustomViewHolder extends RecyclerView.ViewHolder {
